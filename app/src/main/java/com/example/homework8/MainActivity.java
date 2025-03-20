@@ -39,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
     int num1;
     int NUM;
     int num02;
+    int num3;
+    int num03;
     int answer;
     int answer2;
 
@@ -117,6 +119,27 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void stage02(View view) {
 
+        String st = eT2.getText().toString();
+        answer2 = Integer.parseInt(st);
+        if (answer2 == (NUM + num02)) {
+            iV1.setImageResource(R.drawable.img);
+        } else {
+            iV1.setImageResource(R.drawable.img_1);
+        }
 
+        Random random = new Random();
+        num3 = random.nextInt(90) + 10;
+        tV2up.setText(num3);
+        num03 = random.nextInt(90) + 10;
+        tV2down.setText(num03);
+
+        tV3up.setVisibility(View.VISIBLE);
+        tV3down.setVisibility(View.VISIBLE);
+
+        iV3.setVisibility(View.VISIBLE);
+        eT3.setVisibility(View.VISIBLE);
+        btn3.setVisibility(View.VISIBLE);
+    }
 }
