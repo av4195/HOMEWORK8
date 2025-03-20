@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
     int num03;
     int answer;
     int answer2;
+    int answer3;
 
 
 
@@ -141,5 +142,16 @@ public class MainActivity extends AppCompatActivity {
         iV3.setVisibility(View.VISIBLE);
         eT3.setVisibility(View.VISIBLE);
         btn3.setVisibility(View.VISIBLE);
+    }
+
+    public void stage03(View view) {
+        String st = eT3.getText().toString();
+        answer3 = Integer.parseInt(st);
+        if (answer3 == (num3 + num03)) {
+            iV1.setImageResource(R.drawable.img);
+        } else {
+            iV1.setImageResource(R.drawable.img_1);
+        }
+
     }
 }
