@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
     int answer;
     int answer2;
     int answer3;
-
+    int answer0;
 
 
     @Override
@@ -67,8 +67,8 @@ public class MainActivity extends AppCompatActivity {
         tV3up = findViewById(R.id.tV3up);
         tV3down = findViewById(R.id.tV3down);
 
-        eT2 = findViewById(R.id.eT2);
         eT1 = findViewById(R.id.eT1);
+        eT2 = findViewById(R.id.eT2);
         eT3= findViewById(R.id.eT3);
 
 
@@ -77,10 +77,9 @@ public class MainActivity extends AppCompatActivity {
     public void newGame(View view) {
         Random random = new Random();
         num = random.nextInt(90) + 10;
-        tV1up.setText(num);
+        tV1up.setText(""+num);
         num1 = random.nextInt(90) + 10;
-        tV1down.setText(num1);
-
+        tV1down.setText(""+num1);
         tV2up.setVisibility(View.INVISIBLE);
         tV2down.setVisibility(View.INVISIBLE);
         iV2.setVisibility(View.INVISIBLE);
@@ -97,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
     public void stage01(View view) {
         String st = eT1.getText().toString();
         answer = Integer.parseInt(st);
+
         if (answer == (num + num1)) {
             iV1.setImageResource(R.drawable.img);
         } else {
@@ -116,8 +116,6 @@ public class MainActivity extends AppCompatActivity {
         eT2.setVisibility(View.VISIBLE);
         btn2.setVisibility(View.VISIBLE);
 
-
-
     }
 
     public void stage02(View view) {
@@ -125,16 +123,16 @@ public class MainActivity extends AppCompatActivity {
         String st = eT2.getText().toString();
         answer2 = Integer.parseInt(st);
         if (answer2 == (NUM + num02)) {
-            iV1.setImageResource(R.drawable.img);
+            iV2.setImageResource(R.drawable.img);
         } else {
-            iV1.setImageResource(R.drawable.img_1);
+            iV2.setImageResource(R.drawable.img_1);
         }
 
         Random random = new Random();
         num3 = random.nextInt(90) + 10;
-        tV2up.setText(num3);
+        tV3up.setText(""+num3);
         num03 = random.nextInt(90) + 10;
-        tV2down.setText(num03);
+        tV3down.setText(""+num03);
 
         tV3up.setVisibility(View.VISIBLE);
         tV3down.setVisibility(View.VISIBLE);
@@ -148,9 +146,9 @@ public class MainActivity extends AppCompatActivity {
         String st = eT3.getText().toString();
         answer3 = Integer.parseInt(st);
         if (answer3 == (num3 + num03)) {
-            iV1.setImageResource(R.drawable.img);
+            iV3.setImageResource(R.drawable.img);
         } else {
-            iV1.setImageResource(R.drawable.img_1);
+            iV3.setImageResource(R.drawable.img_1);
         }
 
     }
