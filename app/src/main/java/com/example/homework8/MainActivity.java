@@ -105,9 +105,9 @@ public class MainActivity extends AppCompatActivity {
 
         Random random = new Random();
         NUM = random.nextInt(90) + 10;
-        tV2up.setText(NUM);
+        tV2up.setText("" + NUM);
         num02 = random.nextInt(90) + 10;
-        tV2down.setText(num02);
+        tV2down.setText("" + num02);
 
         tV2up.setVisibility(View.VISIBLE);
         tV2down.setVisibility(View.VISIBLE);
